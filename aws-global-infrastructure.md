@@ -1,18 +1,14 @@
 # AWS Global Infrastructure
 
-Infrastructure, like data centers and networking connectivity, still exists as the foundation of every cloud application. In AWS, this physical infrastructure makes up the AWS Global Infrastructure, in the form of Regions and Availability Zones.
+This table provides a concise overview of the different elements that make up AWS Global Infrastructure, each with its own set of advantages and typical use cases.
 
-| Name                   | Description                                                                                                   |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Region                 | An AWS Region is a physical location where AWS will host a cluster of data centers                                      |
-| Availability Zone (AZ) | One or more data centers that are physically separate and isolated from other AZs                             |
-| Edge Location          | A location with a cache of content that can be delivered at low latency to users (used by CloudFront)         |
-| Regional Edge Cache    | Also part of the CloudFront network. These are larger caches that sit between AWS services and Edge Locations |
-| Global Network         | Highly available, low-latency private global network interconnecting every data center, AZ, and AWS region    |
+| Component | Description | Example Use Cases |
+| --- | --- | --- |
+| Regions | Geographically isolated areas with multiple, redundant availability zones. | Data residency, low-latency access |
+| Availability Zones (AZs) | Data centers within a region that are designed to be isolated from failures in other AZs. | High availability, fault tolerance |
+| Edge Locations | Physical locations deployed closer to end users to enable low-latency and high-speed data transfer. | Content delivery, DNS resolution |
+| Local Zones | Infrastructure deployments that extend AWS services closer to end-users in specific cities or locations. | Ultra-low latency applications |
+| Wavelength Zones | Extensions of Availability Zones located within telecommunication carriers' data centers. | Mobile edge computing |
+| Outposts | Fully managed service that extends AWS infrastructure to on-premises for a truly hybrid experience. | Local data processing, low-latency |
 
-
->  Each AWS Region is a separate geographic area. Each AWS Region has multiple, isolated locations known as Availability Zones.
-
-### Availability Zone
-
-Inside every Region is a cluster of Availability Zones (AZs). An AZ consists of one or more data centers with redundant power, networking, and connectivity. These data centers operate in discrete facilities in undisclosed locations. They are connected using redundant high-speed and low-latency links.
+> Each AWS Region is a separate geographic area. Each AWS Region has multiple, isolated locations known as Availability Zones.
